@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Next.js 15 defaults are optimal - no custom config needed
 };
 
 export default nextConfig;

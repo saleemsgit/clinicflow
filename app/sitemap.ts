@@ -1,0 +1,20 @@
+import type { MetadataRoute } from 'next';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://clinicflow.lk';
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const routes = [
+    { path: '/', priority: 1.0, changeFrequency: 'weekly' as const },
+    { path: '/features', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/pricing', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/for-clinics', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/book-demo', priority: 0.8, changeFrequency: 'monthly' as const },
+  ];
+
+  return routes.map((route) => ({
+    url: `${SITE_URL}${route.path}`,
+    lastModified: new Date(),
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }));
+}
