@@ -135,8 +135,7 @@ export default function BookDemoPage() {
               ============================================================
               GOOGLE FORM EMBED
               Replace the form URL in your .env.local file:
-              NEXT_PUBLIC_GOOGLE_FORM_URL=https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true
-              
+              NEXT_PUBLIC_GOOGLE_FORM_URL=https://docs.google.com/forms/d/e/1FAIpQLSfdEkZse3bUFuamJ7F7obCHUENohtBTcFuDbfNUj9DpcQr5SA/viewform?usp=sharing&ouid=111291037966725086575
               Your Google Form should include these fields:
               - Clinic Name
               - Contact Person

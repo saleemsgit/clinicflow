@@ -1,17 +1,8 @@
 'use client';
 
 export default function GoogleFormEmbed() {
-  // =====================================================
-  // REPLACE THE URL BELOW WITH YOUR ACTUAL GOOGLE FORM EMBED URL
-  // How to get your embed URL:
-  // 1. Open your Google Form
-  // 2. Click "Send" (paper airplane icon)
-  // 3. Click the embed icon (<>)
-  // 4. Copy the URL from the iframe src attribute
-  // =====================================================
   const formUrl =
-    process.env.NEXT_PUBLIC_GOOGLE_FORM_URL ||
-    'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true';
+    'https://docs.google.com/forms/d/e/1FAIpQLSfdEkZse3bUFuamJ7F7obCHUENohtBTcFuDbfNUj9DpcQr5SA/viewform?embedded=true';
 
   return (
     <div className="w-full rounded-xl overflow-hidden border border-border bg-white shadow-sm">
