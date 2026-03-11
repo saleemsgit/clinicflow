@@ -6,11 +6,21 @@ import JsonLd from '@/components/JsonLd';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'ClinicFlow LK — Simple Clinic Appointment & Queue System for Sri Lanka',
+  title: 'ClinicFlow LK | Simple Clinic Appointment and Queue System for Sri Lankan Clinics',
   description:
-    'Manage appointments, walk-in queues, doctor schedules, and patient reminders from one simple system. Built for small clinics, dental practices, channeling centers, and physio clinics across Sri Lanka.',
+    'ClinicFlow LK helps Sri Lankan clinics manage appointments, walk-in queues, doctor schedules, WhatsApp and SMS reminders, and front desk work in one simple system.',
   alternates: {
     canonical: '/',
+  },
+  openGraph: {
+    title: 'ClinicFlow LK | Simple Clinic Appointment and Queue System for Sri Lankan Clinics',
+    description: 'ClinicFlow LK helps Sri Lankan clinics manage appointments, walk-in queues, doctor schedules, WhatsApp and SMS reminders, and front desk work in one simple system.',
+    url: '/',
+    type: 'website',
+  },
+  twitter: {
+    title: 'ClinicFlow LK | Simple Clinic Appointment and Queue System for Sri Lankan Clinics',
+    description: 'ClinicFlow LK helps Sri Lankan clinics manage appointments, walk-in queues, doctor schedules, WhatsApp and SMS reminders, and front desk work in one simple system.',
   },
 };
 
@@ -174,22 +184,29 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'ClinicFlow LK',
-    url: 'https://clinicflow.lk',
-    logo: 'https://clinicflow.lk/logo.png',
+    url: 'https://clinicflowlk.vercel.app',
+    logo: 'https://clinicflowlk.vercel.app/logo.png',
     description:
-      'A simple clinic appointment and queue management system for Sri Lankan clinics.',
+      'A simple clinic appointment and queue management system for Sri Lankan clinics. Manage appointments, walk-in queues, doctor schedules, and reminders.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Colombo',
       addressCountry: 'LK',
     },
+    sameAs: [],
   };
 
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'ClinicFlow LK',
-    url: 'https://clinicflow.lk',
+    url: 'https://clinicflowlk.vercel.app',
+    description: 'Simple clinic appointment and queue system for Sri Lankan clinics',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://clinicflowlk.vercel.app/features?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
   };
 
   const faqJsonLd = {
@@ -222,11 +239,11 @@ export default function HomePage() {
                 Built for Sri Lankan Clinics
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-navy-900 leading-tight tracking-tight">
-                Appointments and walk-in queue{' '}
-                <span className="text-primary-600">in one system</span>
+                Simple clinic appointment and queue system{' '}
+                <span className="text-primary-600">for Sri Lankan clinics</span>
               </h1>
               <p className="mt-6 text-lg text-text-secondary leading-relaxed">
-                Stop double booking. Reduce no-shows. Give your front desk a faster, simpler way to manage patients — whether they booked ahead or walked in.
+                ClinicFlow LK helps you manage appointments, walk-in queues, doctor schedules, and patient reminders from one simple system. Stop double booking and reduce no-shows at your clinic.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button href="/book-demo" variant="primary" size="lg" id="hero-book-demo">
@@ -316,7 +333,13 @@ export default function HomePage() {
       {/* ── Trust Strip ──────────────────────────────────────────────── */}
       <SectionWrapper background="white" className="!py-10 border-b border-border-light">
         <p className="text-center text-sm font-medium text-text-muted tracking-wide uppercase">
-          Built for small clinics · dental practices · channeling centers · physiotherapy clinics
+          <span>Built for small clinics</span>
+          <span className="mx-2" aria-hidden="true">·</span>
+          <span>dental practices</span>
+          <span className="mx-2" aria-hidden="true">·</span>
+          <span>channeling centers</span>
+          <span className="mx-2" aria-hidden="true">·</span>
+          <span>physiotherapy clinics</span>
         </p>
       </SectionWrapper>
 
@@ -351,10 +374,10 @@ export default function HomePage() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 tracking-tight">
-              One system for appointments, walk-ins, and everything in between
+              One clinic software system for appointments, walk-ins, and everything in between
             </h2>
             <p className="mt-4 text-text-secondary text-lg leading-relaxed">
-              ClinicFlow LK replaces the notebook, the WhatsApp group, and the sticky notes. Your receptionist sees the full picture — appointments, walk-ins, doctor availability — on one screen.
+              ClinicFlow LK replaces the notebook, the WhatsApp group, and the sticky notes. Your receptionist sees the full picture on one screen: appointments, walk-in queue, and doctor availability.
             </p>
             <ul className="mt-8 space-y-4">
               {[
@@ -401,10 +424,10 @@ export default function HomePage() {
       <SectionWrapper background="white" id="features-preview">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-navy-900 tracking-tight">
-            Everything a small clinic needs
+            Everything a Sri Lankan clinic needs
           </h2>
           <p className="mt-4 text-text-secondary text-lg leading-relaxed">
-            Six core features designed around how Sri Lankan clinics actually work. Nothing extra. Nothing missing.
+            Six core features designed around how clinics in Sri Lanka actually work. Appointment scheduling, walk-in queue management, doctor availability, reminders, and more.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -424,7 +447,7 @@ export default function HomePage() {
         </div>
         <div className="text-center mt-10">
           <Button href="/features" variant="outline" id="features-preview-cta">
-            Explore All Features →
+            Explore All Clinic Software Features →
           </Button>
         </div>
       </SectionWrapper>
@@ -484,10 +507,10 @@ export default function HomePage() {
       <SectionWrapper background="alt" id="clinic-types">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-navy-900 tracking-tight">
-            Built for your type of clinic
+            Clinic software built for your type of clinic
           </h2>
           <p className="mt-4 text-text-secondary text-lg leading-relaxed">
-            Whether you run a single-doctor practice or a busy channeling center, ClinicFlow adapts to how you work.
+            Whether you run a single-doctor private clinic or a busy channeling center in Sri Lanka, ClinicFlow LK adapts to how you work.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -512,14 +535,14 @@ export default function HomePage() {
       {/* ── FAQ ──────────────────────────────────────────────────────── */}
       <SectionWrapper background="white" id="faq">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-10">
+          <header className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 tracking-tight">
               Frequently asked questions
             </h2>
             <p className="mt-4 text-text-secondary text-lg">
-              Common questions from clinic owners and managers.
+              Common questions from clinic owners and managers about ClinicFlow LK.
             </p>
-          </div>
+          </header>
           <FAQ items={faqItems} />
         </div>
       </SectionWrapper>

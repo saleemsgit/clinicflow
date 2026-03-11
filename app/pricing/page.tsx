@@ -5,11 +5,21 @@ import FAQ from '@/components/FAQ';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Pricing — Plans for Every Clinic Size',
+  title: 'ClinicFlow LK Pricing | Clinic Software Pricing in Sri Lanka',
   description:
-    'Affordable pricing plans for Sri Lankan clinics. Starting from LKR 4,900 per month. Choose Starter, Standard, or Pro based on your clinic size and needs.',
+    'See simple ClinicFlow LK pricing for Sri Lankan clinics. Compare plans for appointment booking, queue management, WhatsApp reminders, and front desk support. Starting from LKR 4,900 per month.',
   alternates: {
     canonical: '/pricing',
+  },
+  openGraph: {
+    title: 'ClinicFlow LK Pricing | Clinic Software Pricing in Sri Lanka',
+    description: 'See simple ClinicFlow LK pricing for Sri Lankan clinics. Compare plans for appointment booking, queue management, WhatsApp reminders, and front desk support. Starting from LKR 4,900 per month.',
+    url: '/pricing',
+    type: 'website',
+  },
+  twitter: {
+    title: 'ClinicFlow LK Pricing | Clinic Software Pricing in Sri Lanka',
+    description: 'See simple ClinicFlow LK pricing for Sri Lankan clinics. Compare plans for appointment booking, queue management, WhatsApp reminders, and front desk support. Starting from LKR 4,900 per month.',
   },
 };
 
@@ -138,10 +148,10 @@ export default function PricingPage() {
       <section className="bg-gradient-to-br from-primary-50 via-white to-surface-alt py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-navy-900 tracking-tight">
-            Simple, transparent pricing
+            Clinic software pricing in Sri Lanka
           </h1>
           <p className="mt-6 text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            No hidden fees. No long-term contracts. Pick the plan that fits your clinic and start managing appointments properly today.
+            Simple, transparent pricing for Sri Lankan clinics. No hidden fees. No long-term contracts. Choose a plan that fits your clinic size and start managing appointments, queues, and reminders today.
           </p>
         </div>
       </section>
@@ -213,10 +223,10 @@ export default function PricingPage() {
       <SectionWrapper background="alt">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-navy-900 tracking-tight">
-            The cost of not using ClinicFlow
+            The cost of not using clinic software in Sri Lanka
           </h2>
           <p className="mt-4 text-text-secondary text-lg leading-relaxed">
-            Every no-show costs your clinic a consultation fee. Every double booking costs you a patient. Every hour your receptionist spends on the phone is an hour they could spend on care. ClinicFlow pays for itself within the first month.
+            Every no-show costs your clinic a consultation fee. Every double booking costs you a patient. Every hour your receptionist spends on the phone is an hour they could spend on care. ClinicFlow LK pays for itself within the first month.
           </p>
           <div className="grid sm:grid-cols-3 gap-6 mt-10">
             <div className="p-6 bg-white rounded-xl border border-border">
@@ -238,11 +248,14 @@ export default function PricingPage() {
       {/* ── FAQ ──────────────────────────────────────────────── */}
       <SectionWrapper background="white" id="pricing-faq">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-10">
+          <header className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 tracking-tight">
-              Pricing questions
+              Clinic software pricing questions
             </h2>
-          </div>
+            <p className="mt-4 text-text-secondary text-lg">
+              Common questions about ClinicFlow LK pricing for Sri Lankan clinics.
+            </p>
+          </header>
           <FAQ items={faqItems} />
         </div>
       </SectionWrapper>
@@ -251,14 +264,17 @@ export default function PricingPage() {
       <section className="bg-gradient-to-r from-primary-700 to-primary-800 py-16 md:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-            Start your free demo today
+            Start your free clinic software demo today
           </h2>
           <p className="mt-4 text-primary-100 text-lg max-w-2xl mx-auto">
-            See the full system in action. No commitment. No credit card needed.
+            See the full ClinicFlow LK system in action. No commitment. No credit card needed.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button href="/book-demo" variant="secondary" size="lg" id="pricing-final-cta">
               Book a Free Demo
+            </Button>
+            <Button href="/features" variant="ghost" size="lg" className="!text-white hover:!bg-white/10" id="pricing-features-cta">
+              Explore All Features →
             </Button>
           </div>
         </div>

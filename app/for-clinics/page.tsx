@@ -4,11 +4,21 @@ import Button from '@/components/ui/Button';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'For Clinics — Solutions for Every Clinic Type in Sri Lanka',
+  title: 'ClinicFlow LK for Clinics | Software for Private, Dental and Channeling Clinics',
   description:
-    'ClinicFlow LK serves small private clinics, dental clinics, channeling centers, and physiotherapy clinics across Sri Lanka. See how it fits your clinic workflow.',
+    'See how ClinicFlow LK supports private clinics, dental clinics, and channeling centres in Sri Lanka with appointment scheduling, queue visibility, WhatsApp reminders, and daily operations.',
   alternates: {
     canonical: '/for-clinics',
+  },
+  openGraph: {
+    title: 'ClinicFlow LK for Clinics | Software for Private, Dental and Channeling Clinics',
+    description: 'See how ClinicFlow LK supports private clinics, dental clinics, and channeling centres in Sri Lanka with appointment scheduling, queue visibility, WhatsApp reminders, and daily operations.',
+    url: '/for-clinics',
+    type: 'website',
+  },
+  twitter: {
+    title: 'ClinicFlow LK for Clinics | Software for Private, Dental and Channeling Clinics',
+    description: 'See how ClinicFlow LK supports private clinics, dental clinics, and channeling centres in Sri Lanka with appointment scheduling, queue visibility, WhatsApp reminders, and daily operations.',
   },
 };
 
@@ -93,11 +103,11 @@ export default function ForClinicsPage() {
       <section className="bg-gradient-to-br from-primary-50 via-white to-surface-alt py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-navy-900 tracking-tight">
-            One system, adapted to{' '}
-            <span className="text-primary-600">your clinic workflow</span>
+            Clinic software for private, dental, and channeling clinics{' '}
+            <span className="text-primary-600">in Sri Lanka</span>
           </h1>
           <p className="mt-6 text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Every clinic runs differently. ClinicFlow is simple enough for a solo practice and flexible enough for a multi-doctor channeling center. Here is how it helps your type of clinic.
+            ClinicFlow LK adapts to your clinic workflow. Whether you run a private clinic, dental practice, or channeling centre in Sri Lanka, our appointment and queue system fits your needs.
           </p>
           {/* Quick Jump Links */}
           <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -187,17 +197,17 @@ export default function ForClinicsPage() {
       <section className="bg-gradient-to-r from-primary-700 to-primary-800 py-16 md:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-            Not sure which plan fits your clinic?
+            Not sure which clinic software plan fits your clinic?
           </h2>
           <p className="mt-4 text-primary-100 text-lg max-w-2xl mx-auto">
-            Book a free demo and we will show you exactly how ClinicFlow works for your type of clinic. No commitment.
+            Book a free demo and we will show you exactly how ClinicFlow LK works for your type of clinic in Sri Lanka. No commitment.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button href="/book-demo" variant="secondary" size="lg" id="for-clinics-cta-demo">
               Book a Free Demo
             </Button>
             <Button href="/pricing" variant="ghost" size="lg" className="!text-white hover:!bg-white/10" id="for-clinics-cta-pricing">
-              View Pricing →
+              View Pricing Plans →
             </Button>
           </div>
         </div>

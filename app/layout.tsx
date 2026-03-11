@@ -12,40 +12,50 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://clinicflow.lk'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://clinicflowlk.vercel.app'),
   title: {
-    default: 'ClinicFlow LK — Clinic Appointment & Queue Management System',
+    default: 'ClinicFlow LK | Simple Clinic Appointment and Queue System for Sri Lankan Clinics',
     template: '%s | ClinicFlow LK',
   },
   description:
-    'A simple appointment scheduling and walk-in queue management system for Sri Lankan clinics. Reduce no-shows, prevent double booking, and speed up front-desk operations.',
+    'ClinicFlow LK helps Sri Lankan clinics manage appointments, walk-in queues, doctor schedules, reminders, and front desk work in one simple system.',
   keywords: [
     'clinic appointment system Sri Lanka',
-    'clinic queue management',
-    'appointment booking software',
-    'doctor scheduling system',
-    'channeling center software',
-    'dental clinic booking',
-    'clinic management software Sri Lanka',
+    'clinic queue system Sri Lanka',
+    'clinic software Sri Lanka',
+    'simple clinic appointment system',
+    'appointment and walk-in queue system',
+    'Sri Lankan clinics',
+    'WhatsApp reminders for clinics',
+    'doctor schedule visibility',
+    'clinic front desk software',
+    'private clinic software Sri Lanka',
+    'dental clinic appointment system',
+    'channeling clinic queue management',
   ],
   authors: [{ name: 'ClinicFlow LK' }],
   creator: 'ClinicFlow LK',
+  publisher: 'ClinicFlow LK',
   openGraph: {
     type: 'website',
     locale: 'en_LK',
     siteName: 'ClinicFlow LK',
+    title: 'ClinicFlow LK | Simple Clinic Appointment and Queue System for Sri Lankan Clinics',
+    description: 'ClinicFlow LK helps Sri Lankan clinics manage appointments, walk-in queues, doctor schedules, reminders, and front desk work in one simple system.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'ClinicFlow LK — Clinic Appointment & Queue Management System',
+        alt: 'ClinicFlow LK - Simple Clinic Appointment and Queue System for Sri Lankan Clinics',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     creator: '@clinicflowlk',
+    title: 'ClinicFlow LK | Simple Clinic Appointment and Queue System for Sri Lankan Clinics',
+    description: 'ClinicFlow LK helps Sri Lankan clinics manage appointments, walk-in queues, doctor schedules, reminders, and front desk work in one simple system.',
   },
   robots: {
     index: true,

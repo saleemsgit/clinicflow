@@ -4,11 +4,21 @@ import Button from '@/components/ui/Button';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Features — Appointment Scheduling, Queue Management & More',
+  title: 'ClinicFlow LK Features | Appointments, Queue Management and Reminders',
   description:
-    'Explore the features of ClinicFlow LK: appointment scheduling, walk-in queue management, doctor schedule visibility, WhatsApp reminders, patient records, and daily reporting.',
+    'Explore ClinicFlow LK features including appointment scheduling, walk-in queue management, doctor availability, WhatsApp and SMS reminders, and basic patient records for clinics in Sri Lanka.',
   alternates: {
     canonical: '/features',
+  },
+  openGraph: {
+    title: 'ClinicFlow LK Features | Appointments, Queue Management and Reminders',
+    description: 'Explore ClinicFlow LK features including appointment scheduling, walk-in queue management, doctor availability, WhatsApp and SMS reminders, and basic patient records for clinics in Sri Lanka.',
+    url: '/features',
+    type: 'website',
+  },
+  twitter: {
+    title: 'ClinicFlow LK Features | Appointments, Queue Management and Reminders',
+    description: 'Explore ClinicFlow LK features including appointment scheduling, walk-in queue management, doctor availability, WhatsApp and SMS reminders, and basic patient records for clinics in Sri Lanka.',
   },
 };
 
@@ -113,13 +123,16 @@ export default function FeaturesPage() {
     name: 'ClinicFlow LK',
     applicationCategory: 'HealthApplication',
     operatingSystem: 'Web',
+    url: 'https://clinicflowlk.vercel.app/features',
     description:
-      'A clinic appointment and queue management system for Sri Lankan clinics.',
+      'A clinic appointment and queue management system for Sri Lankan clinics. Features include appointment scheduling, walk-in queue management, doctor availability, WhatsApp and SMS reminders, and patient records.',
+    featureList: 'Appointment Scheduling, Walk-in Queue Management, Doctor Schedule Visibility, WhatsApp and SMS Reminders, Patient Records, Daily Reports',
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'LKR',
       lowPrice: '4900',
       highPrice: '19900',
+      offerCount: '3',
     },
   };
 
@@ -131,11 +144,11 @@ export default function FeaturesPage() {
       <section className="bg-gradient-to-br from-primary-50 via-white to-surface-alt py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-navy-900 tracking-tight">
-            Features built for how clinics{' '}
-            <span className="text-primary-600">actually work</span>
+            Clinic appointment and queue management features{' '}
+            <span className="text-primary-600">for Sri Lankan clinics</span>
           </h1>
           <p className="mt-6 text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Six focused features. No bloat. Everything your clinic needs to manage appointments, queues, reminders, and records — in one clean system.
+            ClinicFlow LK offers appointment scheduling, walk-in queue management, doctor availability visibility, WhatsApp and SMS reminders, patient records, and daily reporting. Everything your Sri Lankan clinic needs in one simple system.
           </p>
         </div>
       </section>
@@ -222,14 +235,17 @@ export default function FeaturesPage() {
       <section className="bg-gradient-to-r from-primary-700 to-primary-800 py-16 md:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-            See these features in action
+            See these clinic software features in action
           </h2>
           <p className="mt-4 text-primary-100 text-lg max-w-2xl mx-auto">
-            Book a free demo and we will walk you through each feature using real clinic scenarios.
+            Book a free demo and we will walk you through each feature using real clinic scenarios. Or check our pricing plans for Sri Lankan clinics.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button href="/book-demo" variant="secondary" size="lg" id="features-cta-book-demo">
               Book a Free Demo
+            </Button>
+            <Button href="/pricing" variant="ghost" size="lg" className="!text-white hover:!bg-white/10" id="features-cta-pricing">
+              View Pricing Plans →
             </Button>
           </div>
         </div>

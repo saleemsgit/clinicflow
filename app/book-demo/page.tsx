@@ -4,11 +4,21 @@ import GoogleFormEmbed from '@/components/GoogleFormEmbed';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Book a Demo — See ClinicFlow LK in Action',
+  title: 'Book a Demo | ClinicFlow LK',
   description:
-    'Book a free, no-pressure demo of ClinicFlow LK. We will walk you through appointment scheduling, queue management, and reminders tailored to your clinic type.',
+    'Book a demo of ClinicFlow LK and see how a simple clinic appointment and queue system can help your Sri Lankan clinic reduce booking confusion and improve front desk flow.',
   alternates: {
     canonical: '/book-demo',
+  },
+  openGraph: {
+    title: 'Book a Demo | ClinicFlow LK',
+    description: 'Book a demo of ClinicFlow LK and see how a simple clinic appointment and queue system can help your Sri Lankan clinic reduce booking confusion and improve front desk flow.',
+    url: '/book-demo',
+    type: 'website',
+  },
+  twitter: {
+    title: 'Book a Demo | ClinicFlow LK',
+    description: 'Book a demo of ClinicFlow LK and see how a simple clinic appointment and queue system can help your Sri Lankan clinic reduce booking confusion and improve front desk flow.',
   },
 };
 
@@ -16,9 +26,14 @@ export default function BookDemoPage() {
   const contactJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
-    name: 'Book a Demo — ClinicFlow LK',
-    description: 'Request a free demo of ClinicFlow LK for your clinic.',
-    url: 'https://clinicflow.lk/book-demo',
+    name: 'Book a Demo - ClinicFlow LK',
+    description: 'Request a free demo of ClinicFlow LK clinic appointment and queue system for your Sri Lankan clinic.',
+    url: 'https://clinicflowlk.vercel.app/book-demo',
+    mainEntity: {
+      '@type': 'Organization',
+      name: 'ClinicFlow LK',
+      url: 'https://clinicflowlk.vercel.app',
+    },
   };
 
   return (
@@ -29,10 +44,10 @@ export default function BookDemoPage() {
       <section className="bg-gradient-to-br from-primary-50 via-white to-surface-alt py-16 md:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-navy-900 tracking-tight">
-            See ClinicFlow LK in action
+            Book a demo of ClinicFlow LK
           </h1>
           <p className="mt-6 text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Book a free demo and we will walk you through the system using real clinic scenarios. No commitment, no credit card, no pressure.
+            See how a simple clinic appointment and queue system can help your Sri Lankan clinic. Book a free demo and we will walk you through appointment scheduling, queue management, and WhatsApp reminders. No commitment, no credit card.
           </p>
         </div>
       </section>
@@ -68,7 +83,7 @@ export default function BookDemoPage() {
             <div className="p-5 rounded-xl bg-surface-alt border border-border-light">
               <h3 className="font-semibold text-navy-900 mb-2">Why book a demo?</h3>
               <p className="text-sm text-text-secondary leading-relaxed">
-                A 15-minute demo is the fastest way to see if ClinicFlow is right for your clinic. We will tailor the session to your clinic type and answer all your questions. No sales pressure — just a clear look at the system.
+                A 15-minute demo is the fastest way to see if ClinicFlow LK is right for your Sri Lankan clinic. We will tailor the session to your clinic type and answer all your questions. No sales pressure — just a clear look at the system. You can also <a href="/features" className="text-primary-600 hover:text-primary-700 underline">explore our features</a> or <a href="/pricing" className="text-primary-600 hover:text-primary-700 underline">check our pricing</a> first.
               </p>
             </div>
 

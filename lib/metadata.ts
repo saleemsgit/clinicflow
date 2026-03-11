@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://clinicflow.lk';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://clinicflowlk.vercel.app';
 const SITE_NAME = 'ClinicFlow LK';
 
 interface PageMetaOptions {
@@ -17,13 +17,13 @@ export function createPageMetadata({
   ogImage = '/og-image.png',
 }: PageMetaOptions): Metadata {
   const url = `${SITE_URL}${path}`;
-  const fullTitle = path === '/' ? `${SITE_NAME} — ${title}` : `${title} | ${SITE_NAME}`;
+  const fullTitle = path === '/' ? `${SITE_NAME} | ${title}` : `${title} | ${SITE_NAME}`;
 
   return {
     title: fullTitle,
     description,
     alternates: {
-      canonical: url,
+      canonical: path,
     },
     openGraph: {
       title: fullTitle,
@@ -37,7 +37,7 @@ export function createPageMetadata({
           url: `${SITE_URL}${ogImage}`,
           width: 1200,
           height: 630,
-          alt: `${SITE_NAME} — ${title}`,
+          alt: `${SITE_NAME} - ${title}`,
         },
       ],
     },

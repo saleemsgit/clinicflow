@@ -2,15 +2,15 @@ import Link from 'next/link';
 
 const footerLinks = {
   product: [
-    { href: '/features', label: 'Features' },
-    { href: '/pricing', label: 'Pricing' },
-    { href: '/book-demo', label: 'Book a Demo' },
+    { href: '/features', label: 'Clinic Software Features' },
+    { href: '/pricing', label: 'Pricing Plans' },
+    { href: '/book-demo', label: 'Book a Free Demo' },
   ],
   clinics: [
-    { href: '/for-clinics#private-clinics', label: 'Private Clinics' },
-    { href: '/for-clinics#dental-clinics', label: 'Dental Clinics' },
-    { href: '/for-clinics#channeling-centers', label: 'Channeling Centers' },
-    { href: '/for-clinics#physio-clinics', label: 'Physio Clinics' },
+    { href: '/for-clinics#private-clinics', label: 'Private Clinic Software' },
+    { href: '/for-clinics#dental-clinics', label: 'Dental Clinic Software' },
+    { href: '/for-clinics#channeling-centers', label: 'Channeling Centre Software' },
+    { href: '/for-clinics#physio-clinics', label: 'Physio Clinic Software' },
   ],
 };
 
@@ -32,7 +32,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed mb-6">
-              A simple appointment and queue management system built for Sri Lankan clinics.
+              ClinicFlow LK is a simple appointment and queue management system built for Sri Lankan clinics. Manage appointments, walk-in queues, doctor schedules, and patient reminders.
             </p>
             <div className="flex gap-3">
               <a
@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
 
           {/* Product Links */}
-          <div>
+          <nav aria-label="Product navigation">
             <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Product</h3>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
@@ -77,11 +77,11 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Clinic Types */}
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">For Clinics</h3>
+          <nav aria-label="Clinic types navigation">
+            <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Clinic Software</h3>
             <ul className="space-y-3">
               {footerLinks.clinics.map((link) => (
                 <li key={link.href}>
@@ -94,7 +94,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Contact */}
           <div>
