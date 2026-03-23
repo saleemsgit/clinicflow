@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import GoogleFormEmbed from '@/components/GoogleFormEmbed';
 import JsonLd from '@/components/JsonLd';
+import { trackEvent, AnalyticsEvents } from '@/lib/analytics';
 
 export const metadata: Metadata = {
   title: 'Book a Demo | ClinicFlow LK',
@@ -34,6 +35,12 @@ export default function BookDemoPage() {
       name: 'ClinicFlow LK',
       url: 'https://clinicflowlk.vercel.app',
     },
+  };
+
+  const handleWhatsAppClick = () => {
+    trackEvent(AnalyticsEvents.WHATSAPP_CONTACT_CLICK, {
+      location: 'book_demo_page',
+    });
   };
 
   return (
@@ -117,6 +124,7 @@ export default function BookDemoPage() {
                 href="https://wa.me/94XXXXXXXXX?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20ClinicFlow%20LK."
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleWhatsAppClick}
                 className="inline-flex items-center gap-2 px-4 py-2.5 bg-green-600 text-white text-sm font-semibold rounded-lg hover:bg-green-700 transition-colors"
                 id="demo-whatsapp-contact"
               >
